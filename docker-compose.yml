@@ -1,0 +1,35 @@
+version: '3.1'
+
+services:
+
+    ieb_wp:
+        image: wordpress:5-php7.3-apache
+        container_name: ieb_wp
+        restart: always
+        ports:
+            - 7000:80
+        depends_on:
+            - ieb_db
+        volumes:
+            - ./wp/src:/var/www/html
+        environment:
+            WORDPRESS_DB_HOST: ieb_db
+            WORDPRESS_DB_USER: serhii
+            WORDPRESS_DB_PASSWORD: 111111
+            WORDPRESS_DB_NAME: ieb
+            WORDPRESS_DEBUG: 1
+
+    ieb_db:
+        image: mysql:8.0
+        command: --default-authentication-plugin=mysql_native_password
+        container_name: ieb_db
+        restart: always
+        ports:
+          - 2226:3306
+        volumes:
+            - ./db/storage:/var/lib/mysql
+        environment:
+            MYSQL_DATABASE: ieb
+            MYSQL_USER: serhii
+            MYSQL_PASSWORD: 111111
+            MYSQL_ROOT_PASSWORD: 111111
