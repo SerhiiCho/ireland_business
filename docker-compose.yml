@@ -33,3 +33,13 @@ services:
             MYSQL_USER: serhii
             MYSQL_PASSWORD: 111111
             MYSQL_ROOT_PASSWORD: 111111
+
+    ieb_node:
+        image: node:8-alpine
+        container_name: ieb_node
+        working_dir: /var/www/html/wp-content/themes/ireland_business
+        volumes:
+            - ./wp/src/wp-content/themes/ireland_business:/var/www/html/wp-content/themes/ireland_business
+        command: sh -c "npm install && npm run dev"
+        depends_on:
+            - ieb_wp
