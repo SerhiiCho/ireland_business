@@ -455,7 +455,7 @@ small {
   width: 70%;
   height: 1000px;
   float: right;
-  background: url("assets/img/darkwood.png") repeat;
+  background: #222 url("assets/img/darkwood.png") repeat;
   background-size: auto;
 }
 
