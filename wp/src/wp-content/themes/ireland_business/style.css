@@ -123,7 +123,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:not([href]):not([tabindex]) {
@@ -162,6 +162,8 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+  max-width: 100%;
+  height: auto;
 }
 
 svg:not(:root) {
@@ -460,6 +462,22 @@ small {
   background-size: cover;
 }
 
+.ieb-wrapper__content {
+  float: left;
+  width: 88%;
+}
+
+.ieb-wrapper__content--in {
+  margin: 90px 6% 0 6%;
+}
+
+.ieb-wrapper__content .ieb-wrapper-inner {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  -webkit-box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.7);
+}
+
 @media (min-width: 1440px) {
   .ieb-wrapper {
     width: 65%;
@@ -476,4 +494,93 @@ small {
   .ieb-wrapper {
     width: 100%;
   }
+}
+
+.ieb-nav-half {
+  width: 70%;
+}
+
+.ieb-nav-wrap {
+  position: fixed;
+  right: 0;
+  background: #121212;
+  z-index: 5;
+}
+
+.ieb-nav-wrap__main {
+  width: 100%;
+  float: left;
+}
+
+.ieb-nav-wrap__main__menu {
+  height: 50px;
+  display: table;
+  margin: 0 auto;
+  list-style: none;
+  position: relative;
+}
+
+.ieb-nav-wrap__main__menu__item {
+  display: inline;
+  float: left;
+  position: relative;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ieb-nav-wrap__main__menu__item:first-child {
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ieb-nav-wrap__main__menu__item a {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  line-height: 50px;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  color: #fff;
+  opacity: 0.8;
+  display: block;
+  position: relative;
+  padding: 0 1.5em 0;
+  -webkit-transition: background-color 400ms;
+  transition: background-color 400ms;
+}
+
+.ieb-nav-wrap__main__menu__item a:hover, .ieb-nav-wrap__main__menu__item a:active {
+  opacity: 1;
+  background: #d86f05;
+}
+
+.ieb-nav-wrap__main__menu__item a.ieb-active {
+  background: #88A65E;
+  color: #fff;
+  opacity: 1;
+}
+
+@media (min-width: 1440px) {
+  .ieb-nav-half {
+    width: 64%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .ieb-nav-half {
+    width: 52%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .ieb-nav-half {
+    width: 100%;
+  }
+}
+
+.ieb-header {
+  float: left;
+}
+
+.ieb-header__figure {
+  float: left;
+  width: 100%;
+  position: relative;
 }

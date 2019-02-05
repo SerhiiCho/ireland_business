@@ -1,0 +1,62 @@
+.ieb-nav-half
+    width: 70%
+
+.ieb-nav-wrap
+    position: fixed
+    right: 0
+    background: #121212
+    z-index: 5
+
+    &__main
+        width: 100%
+        float: left
+
+        &__menu
+            height: 50px
+            display: table
+            margin: 0 auto
+            list-style: none
+            position: relative
+
+            &__item
+                display: inline
+                float: left
+                position: relative
+                border-right: 1px solid rgba(255,255,255,0.05)
+
+                &:first-child
+                    border-left: 1px solid rgba(255,255,255,0.05)
+
+                a
+                    font-family: sans-serif
+                    text-transform: uppercase
+                    line-height: 50px
+                    font-size: 0.8em
+                    letter-spacing: 0.1em
+                    color: $color-nav--text
+                    opacity: 0.8
+                    display: block
+                    position: relative
+                    padding: 0 1.5em 0
+                    transition: background-color 400ms
+
+                    &:hover, &:active
+                        opacity: 1
+                        background: $color-nav--active
+
+                    &.ieb-active
+                        background: $color-nav--hover
+                        color: $color-nav--text
+                        opacity: 1
+
+@media (min-width: 1440px)
+    .ieb-nav-half
+        width: 64%
+
+@media (min-width: 1600px)
+    .ieb-nav-half
+        width: 52%
+
+@media (max-width: 1280px)
+    .ieb-nav-half
+        width: 100%
