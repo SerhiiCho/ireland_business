@@ -24,8 +24,8 @@
                                 alt="<?php _e('Логотип', 'ieb'); ?>"
                             >
                         </a>
-                    </div>
-                </div>
+                    </div> <!-- / .ieb-header__logo-place__logo -->
+                </div> <!-- / .ieb-header__logo-place -->
             </header> <!-- / .ieb-header -->
         </div> <!-- / .ieb-wrapper__content -->
     </div> <!-- / .ieb-wrapper-inner -->
