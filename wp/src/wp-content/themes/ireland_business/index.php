@@ -11,9 +11,11 @@
             <div class="ieb-wrapper__content__inner">
                 <header class="ieb-header">
                     <figure class="ieb-header__figure">
-                        <img src="<?php ieb_get_img('scene.jpg'); ?>"
-                            alt="<?php _e('Баннер изображение', 'ieb'); ?>"
+                        <div class="ieb-lazy-load-lg ieb-lazy-load"
+                            data-alt="<?php _e('Баннер изображение', 'ieb'); ?>"
+                            data-lazy-load="<?php ieb_get_img('scene.jpg'); ?>"
                         >
+                    </div>
                     </figure> <!-- / .ieb-header__figure -->
 
                     <div class="ieb-header__line"></div>
@@ -21,9 +23,10 @@
                     <div class="ieb-header__logo-place">
                         <div class="ieb-header__logo-place__logo">
                             <a href="#!" title="<?php _e('Логотип', 'ieb'); ?>">
-                                <img src="<?php ieb_get_img('logo.png'); ?>"
-                                    alt="<?php _e('Логотип', 'ieb'); ?>"
-                                >
+                                <div class="ieb-lazy-load-lg ieb-lazy-load"
+                                    data-alt="<?php _e('Логотип', 'ieb'); ?>"
+                                    data-lazy-load="<?php ieb_get_img('logo.png'); ?>"
+                                ></div>
                             </a>
                         </div> <!-- / .ieb-header__logo-place__logo -->
                     </div> <!-- / .ieb-header__logo-place -->
@@ -31,14 +34,16 @@
 
                 <article class="ieb-intro">
                     <figure class="ieb-intro__figure">
-                        <img class="ieb-intro__figure__side" 
-                            src="http://demo.virtuti.info/demonstrations/vt12/wp-content/themes/pub/images/clovers.png"
-                            alt=""
-                        >
-                        <img class="ieb-intro__figure__center" 
-                            src="http://demo.virtuti.info/demonstrations/vt12/wp-content/themes/pub/images/barrel.png"
-                            alt=""
-                        >
+                        <div class="ieb-lazy-load-sm ieb-lazy-load ieb-no-preloader"
+                            data-alt="<?php _e('Nрелистник', 'ieb'); ?>"
+                            data-lazy-load="<?php ieb_get_img('clovers.png'); ?>"
+                            data-class="ieb-intro__figure__side"
+                        ></div>
+                        <div class="ieb-lazy-load-sm ieb-lazy-load ieb-no-preloader"
+                            data-alt="<?php _e('Nрелистник', 'ieb'); ?>"
+                            data-lazy-load="<?php ieb_get_img('barrel.png'); ?>"
+                            data-class="ieb-intro__figure__center"
+                        ></div>
                     </figure> <!-- / .ieb-intro__figure -->
                     <section class="ieb-intro__content">
                         <h1 class="ieb-intro__content__title">The Wild Rover</h1>
