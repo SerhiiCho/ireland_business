@@ -56,3 +56,16 @@ function ieb_rand_bg(): string
     $rgb = [rand(1, 255), rand(1, 255), rand(1, 255)];
     return print("background-color:rgba({$rgb[0]},{$rgb[1]},{$rgb[2]},.3);");
 }
+
+/**
+ * Some sort of alias for getting image from theme folder
+ *
+ * @author Serhii Cho <serhiicho@protonmail.com>
+ * @version 1.0.0
+ * @param string $file
+ * @return string
+ */
+function ieb_get_img(string $file): string
+{
+    return print(get_template_directory_uri() . "/assets/img/{$file}");
+}
