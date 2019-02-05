@@ -1,0 +1,35 @@
+.ieb-nav-wrap2__mobile__ham-wrap
+    width: 40px
+    height: 40px
+    display: block
+    position: relative
+    background: $color-nav--hover
+    padding: 2px 0
+    cursor: pointer
+
+    span
+        width: 28px
+        height: 5px
+        background-color: $color-nav--text
+        display: block
+        margin: 5px auto
+        transition: transform 200ms ease-in-out, width 200ms
+
+    &__btn.ieb-ham-active
+        transition: transform 200ms ease-in-out, width 200ms
+        transition-delay: 0.6s
+        transform: rotate(45deg)
+
+        span
+            &:nth-child(2)
+                width: 0px
+
+            &:nth-child(1),
+            &:nth-child(3)
+                transition-delay: 0.3s
+
+            &:nth-child(1)
+                transform: translateY(10px)
+
+            &:nth-child(3)
+                transform: translateY(-10px) rotate(90deg)

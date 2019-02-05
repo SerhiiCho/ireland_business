@@ -16,8 +16,12 @@
 <div class="ieb-nav-wrap2 ieb-nav-half">
     <nav class="ieb-nav-wrap2__mobile">
         <!-- Show navmenu trigger -->
-        <a href="#!" class="ieb-nav-wrap2__mobile__ham">
-            <img src="<?php ieb_get_img('menu.png'); ?>" class="ieb-nav-wrap2__mobile__ham__img">
+        <a href="#!" class="ieb-nav-wrap2__mobile__ham-wrap">
+            <div class="ieb-nav-wrap2__mobile__ham-wrap__btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </a>
         <ul class="ieb-nav-wrap2__menu">
             <li class="ieb-nav-wrap2__menu__item">
