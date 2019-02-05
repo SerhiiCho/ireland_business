@@ -45,19 +45,6 @@ function ieb_file_ver(string $file): string
 }
 
 /**
- * Generates random background color
- *
- * @version 1.0.0
- * @author Serhii Cho <serhiicho@protonmail.com>
- * @return string
- */
-function ieb_rand_bg(): string
-{
-    $rgb = [rand(1, 255), rand(1, 255), rand(1, 255)];
-    return print("background-color:rgba({$rgb[0]},{$rgb[1]},{$rgb[2]},.3);");
-}
-
-/**
  * Some sort of alias for getting image from theme folder
  *
  * @author Serhii Cho <serhiicho@protonmail.com>
