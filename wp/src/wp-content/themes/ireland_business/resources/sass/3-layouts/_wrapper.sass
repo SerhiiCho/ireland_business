@@ -1,6 +1,5 @@
 .ieb-wrapper
     width: 70%
-    height: 1000px
     float: right
     background: $background-wrapper--cover
     background-size: auto
@@ -9,14 +8,22 @@
         float: left
         width: 88%
 
+        &__inner
+            float: left
+            width: 100%
+            background: #111
+            border: 1px solid rgba(255,255,255,0.03)
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.7)
+
         &--in
             margin: 90px 6% 0 6%
 
-        .ieb-wrapper-inner
-            background: #111
-            height: 100%
-            border: 1px solid rgba(255,255,255,0.03)
-            box-shadow: 0 -10px 30px rgba(0,0,0,0.7)
+    .ieb-wrapper-inner
+        background: #111
+        height: 100%
+        border: 1px solid rgba(255,255,255,0.03)
+        border-top: none
+        box-shadow: 0 -10px 30px rgba(0,0,0,0.7)
 
 @media (min-width: 1440px)
     .ieb-wrapper

@@ -6,6 +6,14 @@
   unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+@font-face {
+  font-family: "Sorts Mill Goudy";
+  src: local("Sorts Mill Goudy Regular"), local("SortsMillGoudy-Regular"), url("https://fonts.gstatic.com/s/sortsmillgoudy/v8/Qw3GZR9MED_6PSuS_50nEaVrfzgEbHoEjw.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /**!
  * Theme Name: Ireland business
  * Author: Serhii Cho
@@ -453,7 +461,6 @@ small {
 
 .ieb-wrapper {
   width: 70%;
-  height: 1000px;
   float: right;
   background: #222 url("assets/img/darkwood.png") repeat;
   background-size: auto;
@@ -464,14 +471,24 @@ small {
   width: 88%;
 }
 
+.ieb-wrapper__content__inner {
+  float: left;
+  width: 100%;
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  -webkit-box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.7);
+}
+
 .ieb-wrapper__content--in {
   margin: 90px 6% 0 6%;
 }
 
-.ieb-wrapper__content .ieb-wrapper-inner {
+.ieb-wrapper .ieb-wrapper-inner {
   background: #111;
   height: 100%;
   border: 1px solid rgba(255, 255, 255, 0.03);
+  border-top: none;
   -webkit-box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.7);
           box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.7);
 }
@@ -688,4 +705,61 @@ small {
   width: 100%;
   display: inline-block;
   margin: 40px 0;
+}
+
+.ieb-intro {
+  width: 84%;
+  height: auto;
+  float: left;
+  margin: 0 8% 40px 8%;
+  position: relative;
+}
+
+.ieb-intro__figure {
+  width: 24%;
+  display: table;
+}
+
+.ieb-intro__figure__side {
+  width: 180px;
+  position: absolute;
+  bottom: -10%;
+  left: -16%;
+}
+
+.ieb-intro__figure__center {
+  width: 140px;
+  position: absolute;
+  bottom: 10%;
+  left: -10%;
+}
+
+.ieb-intro__content {
+  float: left;
+  width: 100%;
+  padding: 40px 50px 40px 16%;
+  background: #111;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 6px double rgba(255, 255, 255, 0.03);
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  color: #808080;
+}
+
+.ieb-intro__content__title {
+  font-size: 1.4em;
+  line-height: 1.25em;
+  letter-spacing: 0.1em;
+  margin: 0 0 14px 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: left;
+}
+
+.ieb-intro__content__text {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  font-family: "Sorts Mill Goudy", serif;
 }
