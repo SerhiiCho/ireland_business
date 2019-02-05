@@ -1,0 +1,46 @@
+.ieb-lazy-load
+    position: relative
+    background: #111
+
+.ieb-lazy-loaded
+    transition: opacity 700ms
+
+.ieb-hide
+    opacity: 0
+
+.ieb-lazy-load.ieb-lazy-load-sm
+    &::before
+        width: 16px
+        height: 16px
+        border: 2px solid rgba(0, 0, 0, .2)
+        margin-top: -8px
+        margin-left: -8px
+
+.ieb-lazy-load.ieb-lazy-load-lg
+    min-height: 170px
+
+    &::before
+        width: 40px
+        height: 40px
+        border: 4px solid rgba(0, 0, 0, .2)
+        margin-top: -20px
+        margin-left: -20px
+
+.ieb-lazy-load.ieb-lazy-load
+    &::before
+        content: ""
+        position: absolute
+        top: 50%
+        left: 50%
+        border-radius: 50%
+        border-top-color: $color-main
+        animation: n-spinner 0.5s linear infinite
+
+.ieb-lazy-load.ieb-no-preloader
+    &::before
+        content: none
+
+
+@keyframes n-spinner
+    to
+        transform: rotate(360deg)
