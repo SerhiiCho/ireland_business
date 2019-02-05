@@ -1,12 +1,4 @@
 @font-face {
-  font-family: "Poiret One";
-  src: local("Poiret One"), local("PoiretOne-Regular"), url("https://fonts.gstatic.com/s/poiretone/v7/UqyVK80NJXN4zfRgbdfbo55cVw.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
   font-family: "Sorts Mill Goudy";
   src: local("Sorts Mill Goudy Regular"), local("SortsMillGoudy-Regular"), url("https://fonts.gstatic.com/s/sortsmillgoudy/v8/Qw3GZR9MED_6PSuS_50nEaVrfzgEbHoEjw.woff2") format("woff2");
   font-style: normal;
@@ -412,11 +404,12 @@ small {
 }
 
 .ieb-sidebar__bg__table__cell__content__title1, .ieb-sidebar__bg__table__cell__content__title2 {
-  font-family: "Poiret One", sans-serif;
+  font-family: sans-serif;
+  font-weight: 100;
   text-align: center;
   text-transform: uppercase;
   color: #f0f0f0;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   line-height: normal;
   margin: 7px 0;
 }
