@@ -372,7 +372,6 @@ small {
   width: 100%;
   height: 100%;
   background: url("assets/img/bg-interior.jpg") top left no-repeat;
-  background-size: auto;
   background-size: cover;
 }
 
@@ -405,7 +404,7 @@ small {
 }
 
 .ieb-sidebar__bg__table__cell__content__title1, .ieb-sidebar__bg__table__cell__content__title2 {
-  font-family: 'Poiret One', sans-serif;
+  font-family: "Poiret One", sans-serif;
   text-align: center;
   text-transform: uppercase;
   color: #f0f0f0;
@@ -459,7 +458,6 @@ small {
   float: right;
   background: url("assets/img/darkwood.png") repeat;
   background-size: auto;
-  background-size: cover;
 }
 
 .ieb-wrapper__content {
@@ -473,6 +471,7 @@ small {
 
 .ieb-wrapper__content .ieb-wrapper-inner {
   background: #111;
+  height: 100%;
   border: 1px solid rgba(255, 255, 255, 0.03);
   -webkit-box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.7);
           box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.7);
@@ -572,6 +571,9 @@ small {
 @media (max-width: 1280px) {
   .ieb-nav-half {
     width: 100%;
+  }
+  .ieb-nav-wrap__main {
+    display: none;
   }
 }
 

@@ -17,7 +17,7 @@
         height: 100%
         min-height: 100%
         width: 40px
-        background: #121212
+        background: $color-sidebar--border
 
     &__border
         right: 70%
@@ -32,8 +32,7 @@
         float: left
         width: 100%
         height: 100%
-        background: url('assets/img/bg-interior.jpg') top left no-repeat
-        background-size: auto
+        background: $background-sidebar--cover
         background-size: cover
 
         &__table
@@ -41,7 +40,7 @@
             margin: 0 auto
             height: 100%
             width: 100%
-            background: rgba(0,0,0,0.6)
+            background: $color-sidebar--overlay
 
             &__cell
                 display: table-cell
@@ -53,7 +52,7 @@
                     text-align: center
 
                     &__stars
-                        background: url('assets/img/stars.png') center no-repeat
+                        background: $background-sidebar--stars
                         background-size: contain
                         width: 120px
                         height: 17px
@@ -62,7 +61,7 @@
 
                     &__title1,
                     &__title2
-                        font-family: 'Poiret One', sans-serif
+                        font-family: $font-family-sidebar--title
                         text-align: center
                         text-transform: uppercase
                         color: #f0f0f0
