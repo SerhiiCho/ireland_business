@@ -1,11 +1,14 @@
 .ieb-nav-half
     width: 70%
 
-.ieb-nav-wrap
-    position: fixed
+.ieb-nav-wrap1,
+.ieb-nav-wrap2
     right: 0
-    background: #121212
+    background: $background-nav--cover
     z-index: 5
+
+.ieb-nav-wrap1
+    position: fixed
 
     &__main
         width: 100%
@@ -49,6 +52,63 @@
                         color: $color-nav--text
                         opacity: 1
 
+.ieb-nav-wrap2
+    position: absolute
+
+    &__mobile
+        display: none
+        float: left
+        padding: 12px
+
+        &__ham
+            width: 38px
+            height: 38px
+            float: left
+            display: block
+            position: relative
+            border: 1px solid rgba(255,255,255,0.2)
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1)
+            background: $color-nav--hover
+            text-align: center
+            color: $color-nav--text
+            font-size: 1.5em
+            line-height: 38px
+            cursor: pointer
+
+            &__img
+                display: block
+                margin: 10px
+                height: 16px
+                width: 16px
+
+    &__menu
+        width: 50%
+        position: absolute
+        z-index: 10
+        top: 62px
+        left: 0
+        transform: translateX(-120%)
+        transition: transform 200ms
+        list-style: none
+        color: $color-nav--text
+        background: $color-nav--hover
+        box-shadow: 0 2px 100px rgba(0,0,0,0.2)
+        padding: 10px 15px;
+
+        &.ieb-active
+            transform: translateX(0)
+
+        &__item
+            border-bottom: 1px solid rgba(255,255,255,0.1)
+
+            a
+                line-height: 36px
+                font-size: 0.8em
+                text-transform: uppercase
+                color: $color-nav--text
+                font-weight: 700
+                letter-spacing: 0.1em
+
 @media (min-width: 1440px)
     .ieb-nav-half
         width: 64%
@@ -61,5 +121,8 @@
     .ieb-nav-half
         width: 100%
 
-    .ieb-nav-wrap__main
+    .ieb-nav-wrap1__main
         display: none
+
+    .ieb-nav-wrap2__mobile
+        display: block
