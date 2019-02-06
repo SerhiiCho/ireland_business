@@ -1,2 +1,2 @@
-import './controllers/_navmenu'
-import './controllers/_general'
+import './controllers/navmenu'
+import './controllers/general'

@@ -1,4 +1,4 @@
-import addClassAfterClick from "../functions/_addClassAfterClick"
+import addClassAfterClick from "../modules/addClassAfterClick"
 
 ;(function ShowNavmenuAfterButtonClickOnMobileScreen() {
     const btn = document.querySelector('.ieb-nav-wrap2__mobile__ham-wrap')
