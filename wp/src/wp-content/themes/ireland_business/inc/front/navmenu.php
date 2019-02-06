@@ -1,5 +1,5 @@
 <!-- Desktop navmenu -->
-<div class="ieb-nav-wrap1 ieb-nav-half">
+<div class="ieb-nav-wrap1 ieb-half">
     <nav class="ieb-nav-wrap1__main">
         <ul class="ieb-nav-wrap1__main__menu ieb-btn-fields">
             <li class="ieb-nav-wrap1__main__menu__item">
@@ -12,10 +12,10 @@
             </li>
         </ul> <!-- / .ieb-nav-wrap1__main__menu -->
     </nav> <!-- / .ieb-nav-wrap1__main -->
-</div> <!-- / .ieb-nav-wrap1 --> <!-- / .ieb-nav-half -->
+</div> <!-- / .ieb-nav-wrap1 --> <!-- / .ieb-half -->
 
 <!-- Mobile navmenu -->
-<div class="ieb-nav-wrap2 ieb-nav-half">
+<div class="ieb-nav-wrap2 ieb-half">
     <nav class="ieb-nav-wrap2__mobile">
         <!-- Show navmenu trigger -->
         <a href="#!" class="ieb-nav-wrap2__mobile__ham-wrap">
@@ -34,4 +34,4 @@
             </li>
         </ul> <!-- ieb-nav-wrap2__menu -->
     </nav> <!-- / .ieb-nav-wrap2__mobile -->
-</div> <!-- / .ieb-mobile-wrap2 --> <!-- / .ieb-nav-half -->
+</div> <!-- / .ieb-mobile-wrap2 --> <!-- / .ieb-half -->
