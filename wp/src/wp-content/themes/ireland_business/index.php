@@ -53,6 +53,8 @@
             </div> <!-- / .ieb-wrapper__content-inner -->
         </div> <!-- / .ieb-wrapper__content -->
     </div> <!-- / .ieb-wrapper-inner -->
+
+    <?php get_template_part('inc/front/footer'); ?>
 </div> <!-- / .ieb-wrapper -->
 
 <?php wp_footer(); ?>
