@@ -12,6 +12,16 @@
             >
         </div> <!-- / .ieb-contact__inputs__wrap -->
         <div class="ieb-contact__inputs__wrap">
+            <label for="ieb-input-gender"><?php _e('Пол', 'ieb'); ?></label>
+            <select name="gender" 
+                id="ieb-input-gender"
+                class="ieb-contact__inputs__wrap__select"
+            >
+                <option value="men"><?php _e('Мужской', 'ieb'); ?></option>
+                <option value="women"><?php _e('Женский', 'ieb'); ?></option>
+            </select>
+        </div> <!-- / .ieb-contact__inputs__wrap -->
+        <div class="ieb-contact__inputs__wrap">
             <button type="submit" class="ieb-contact__inputs__wrap__submit">
                 <?php _e('Отправить', 'ieb'); ?>
             </button>

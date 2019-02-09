@@ -868,7 +868,7 @@ small {
   font-size: .9em;
 }
 
-.ieb-contact__inputs__wrap__text, .ieb-contact__inputs__wrap__submit {
+.ieb-contact__inputs__wrap__text, .ieb-contact__inputs__wrap__select, .ieb-contact__inputs__wrap__submit {
   text-transform: uppercase;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -878,7 +878,7 @@ small {
   font-size: 0.8em;
 }
 
-.ieb-contact__inputs__wrap__text {
+.ieb-contact__inputs__wrap__text, .ieb-contact__inputs__wrap__select {
   width: 100%;
   color: #111;
   border: 1px solid #111;
