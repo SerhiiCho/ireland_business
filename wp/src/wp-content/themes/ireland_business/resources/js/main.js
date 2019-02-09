@@ -1,2 +1,2 @@
-import './controllers/navmenu'
-import './controllers/general'
+import './components/navmenu'
+import './components/general'
