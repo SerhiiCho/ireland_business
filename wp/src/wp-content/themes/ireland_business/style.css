@@ -850,11 +850,11 @@ small {
   margin: 1em 2.5%;
 }
 
-.ieb-contact_form {
+.ieb-contact__form {
   margin-top: 1.5em;
 }
 
-.ieb-contact_form__field {
+.ieb-contact__form__field {
   width: 100%;
   min-width: 300px;
   max-width: 500px;
@@ -862,13 +862,13 @@ small {
   margin: .7em auto;
 }
 
-.ieb-contact_form__field label {
+.ieb-contact__form__field label {
   display: block;
   margin-bottom: 2px;
   font-size: .9em;
 }
 
-.ieb-contact_form__field__text, .ieb-contact_form__field__select, .ieb-contact_form__field__submit {
+.ieb-contact__form__field__text, .ieb-contact__form__field__select, .ieb-contact__form__field__submit {
   text-transform: uppercase;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -878,14 +878,14 @@ small {
   font-size: 0.8em;
 }
 
-.ieb-contact_form__field__text, .ieb-contact_form__field__select {
+.ieb-contact__form__field__text, .ieb-contact__form__field__select {
   width: 100%;
   color: #111;
   border: 1px solid #111;
   background-color: transparent;
 }
 
-.ieb-contact_form__field__submit {
+.ieb-contact__form__field__submit {
   background: #88A65E;
   color: white;
   border: none;
