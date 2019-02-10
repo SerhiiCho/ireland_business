@@ -1,5 +1,6 @@
 import LazyLoader from '../modules/LazyLoader'
-import ScrollAfterClick from "../modules/ScrollAfterClick";
+import ScrollAfterClick from "../modules/ScrollAfterClick"
+import ContactForm from "../modules/ContactForm"
 
 ;(function RunClassThatLazyLoadsImagesInPlaceholderElements() {
     const holders = document.querySelectorAll('.ieb-lazy-load')
@@ -9,4 +10,9 @@ import ScrollAfterClick from "../modules/ScrollAfterClick";
 ;(function ListenForMenuClickEventAndScrollToNeededPosition() {
     const btnFields = document.querySelectorAll('.ieb-btn-fields')
     btnFields ? new ScrollAfterClick(btnFields).listen() : ''
+})()
+
+;(function HandleContactFormSubmition() {
+    const form = document.querySelector('.ieb-contact__form')
+    form ? new ContactForm(form).listen() : ''
 })()
