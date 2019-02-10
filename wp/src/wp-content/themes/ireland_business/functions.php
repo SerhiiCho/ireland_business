@@ -6,4 +6,5 @@ ieb_require_inc_files([
     'after-theme-support',
     'enqueue_scripts',
     'custom-post-type',
+    'ajax',
 ]);
