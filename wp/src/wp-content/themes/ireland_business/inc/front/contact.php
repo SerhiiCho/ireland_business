@@ -1,7 +1,7 @@
 <div class="ieb-contact">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maxime cum exercitationem delectus, placeat et laboriosam adipisci voluptatum veniam tenetur animi itaque ullam rem harum velit dolor possimus ut non!</p>
 
-    <form method="post" class="ieb-contact__form">
+    <form method="post" class="ieb-contact__form" action="#">
         <div class="ieb-contact__form__field">
             <label for="ieb-input-name"><?php _e('Имя', 'ieb'); ?></label>
             <input type="text"
@@ -24,7 +24,7 @@
         </div> <!-- / .ieb-contact__form__field -->
 
         <div class="ieb-contact__form__field">
-            <button type="submit" class="ieb-contact__form__field__submit">
+            <button type="submit" name="submit" class="ieb-contact__form__field__submit">
                 <?php _e('Отправить', 'ieb'); ?>
             </button>
         </div> <!-- / .ieb-contact__form__field -->
