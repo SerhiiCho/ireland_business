@@ -11,12 +11,15 @@ function ieb_handle_contact_form() {
 
     // validate data here .....
 
-    wp_insert_post([
+    echo wp_insert_post([
         'post_title' => $name,
-        'post_content' => $gender,
+        'post_status' => 'publish',
         'post_author' => 1,
+        'post_type' => 'ieb-contact',
+        'meta_input' => [
+            '_contact_gender_value_key' => $gender
+        ]
     ]);
 
-    echo 'nice';
     exit;
 }
