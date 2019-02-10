@@ -38,7 +38,12 @@
                 background-color: transparent
 
             &__submit
-                background: #88A65E
+                background: $background-contact--button
                 color: white
                 border: none
                 letter-spacing: 1px
+                cursor: pointer
+
+                &:disabled
+                    opacity: .5
+                    cursor: not-allowed

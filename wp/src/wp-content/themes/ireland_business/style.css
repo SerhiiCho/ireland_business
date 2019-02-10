@@ -890,6 +890,12 @@ small {
   color: white;
   border: none;
   letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.ieb-contact__form__field__submit:disabled {
+  opacity: .5;
+  cursor: not-allowed;
 }
 
 .ieb-copyright {

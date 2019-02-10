@@ -7,8 +7,6 @@ export default class {
      */
     constructor(form) {
         this.form = form
-        this.name = form.querySelector('#ieb-input-name').value
-        this.gender = form.querySelector('#ieb-input-gender').value
     }
 
     /**
@@ -17,10 +15,22 @@ export default class {
      * @return {void}
      */
     listen() {
-        this.form.addEventListener('submit', e => {
-            e.preventDefault()
-            this.makeRequest()
-        })
+        this.form.addEventListener('submit', e => this.handleEvent(e))
+    }
+
+    /**
+     * Sets properties and makes request to the server
+     * 
+     * @param {object} event Event object
+     * @return {void}
+     */
+    handleEvent(event) {
+        event.preventDefault()
+        this.name = this.form.elements.name.value
+        this.gender = this.form.elements.gender.value
+        this.submitBtn = this.form.elements.submit
+        this.makeRequest()
+        this.showLoadingSpinner()
     }
 
     /**
@@ -32,6 +42,20 @@ export default class {
         axios.post(ieb_globals.ajax_url, this.createParams())
             .then(res => this.receiveResponse(res.data))
             .catch(err => console.error(err))
+    }
+
+    /**
+     * @return {void}
+     */
+    showLoadingSpinner() {
+        this.submitBtn.disabled = true
+    }
+
+    /**
+     * @return {void}
+     */
+    hideLoadingSpinner() {
+        this.submitBtn.disabled = false
     }
 
     /**
@@ -53,6 +77,8 @@ export default class {
      * @return {void}
      */
     receiveResponse(data) {
-        console.log(data)
+        if (data === 0) {
+            this.hideLoadingSpinner()
+        }
     }
 }
