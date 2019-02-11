@@ -92,6 +92,7 @@ export default class {
      * 
      * @param {string} message Message that will be displayed
      * @param {string} color Font color of the message
+     * @return {void}
      */
     displayMessage(message, color) {
         let span = document.createElement('span')
@@ -100,11 +101,21 @@ export default class {
         span.style.color = color
         span.className = 'ieb-contact__form__message'
         span.appendChild(msg)
+
+        this.deleteOldMessage()
         this.form.appendChild(span)
 
         setTimeout(() => {
             span.style.opacity = 1
             span.style.transform = 'translateY(0)'
         }, 100)
+    }
+
+    /**
+     * @return {void}
+     */
+    deleteOldMessage() {
+        const msg = document.querySelector('.ieb-contact__form__message')
+        msg ? msg.remove() : ''
     }
 }
