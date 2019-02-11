@@ -7,6 +7,8 @@ add_action('wp_enqueue_scripts', function () {
     wp_localize_script('ieb-js', 'ieb_globals', [
         'ajax_url' => admin_url('admin-ajax.php'),
         'nonce' => wp_create_nonce('ieb'),
+        'contact_error' => __('Произошла ошибка при попытке отправить данные. Попробуйте еще раз', 'ieb'),
+        'contact_success' => __('Данные успешно отправлены', 'ieb'),
     ]);
 
     wp_enqueue_script('ieb-js', ieb_get_dir_uri('assets/main.js'), [], ieb_file_ver('assets/main.js'), true);

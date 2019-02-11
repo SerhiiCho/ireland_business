@@ -73,12 +73,38 @@ export default class {
     }
 
     /**
+     * Check response and call methods depending on the response result
+     * 
      * @param {number} data
      * @return {void}
      */
     receiveResponse(data) {
         if (data === 0) {
             this.hideLoadingSpinner()
+            this.displayMessage(ieb_globals.contact_error, '#c90000')
+        } else {
+            this.displayMessage(ieb_globals.contact_success, '#107800')
         }
+    }
+
+    /**
+     * Create and append message to DOM element
+     * 
+     * @param {string} message Message that will be displayed
+     * @param {string} color Font color of the message
+     */
+    displayMessage(message, color) {
+        let span = document.createElement('span')
+        let msg = document.createTextNode(message)
+
+        span.style.color = color
+        span.className = 'ieb-contact__form__message'
+        span.appendChild(msg)
+        this.form.appendChild(span)
+
+        setTimeout(() => {
+            span.style.opacity = 1
+            span.style.transform = 'translateY(0)'
+        }, 100)
     }
 }
