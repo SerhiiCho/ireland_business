@@ -18,8 +18,8 @@
                 id="ieb-input-gender"
                 class="ieb-contact__form__field__select"
             >
-                <option value="men"><?php _e('Мужской', 'ieb'); ?></option>
-                <option value="women"><?php _e('Женский', 'ieb'); ?></option>
+                <option value="man"><?php _e('Мужской', 'ieb'); ?></option>
+                <option value="woman"><?php _e('Женский', 'ieb'); ?></option>
             </select>
         </div> <!-- / .ieb-contact__form__field -->
 

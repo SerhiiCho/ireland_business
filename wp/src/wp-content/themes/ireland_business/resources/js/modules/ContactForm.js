@@ -29,8 +29,7 @@ export default class {
         this.name = this.form.elements.name.value
         this.gender = this.form.elements.gender.value
         this.submitBtn = this.form.elements.submit
-        this.makeRequest()
-        this.showLoadingSpinner()
+        this.validateUserInput()
     }
 
     /**
@@ -41,7 +40,7 @@ export default class {
     makeRequest() {
         axios.post(ieb_globals.ajax_url, this.createParams())
             .then(res => this.receiveResponse(res.data))
-            .catch(err => this.displayMessage(ieb_globals.contact_error, '#c90000'))
+            .catch(err => this.displayMessage(ieb_globals.cont_err, '#c90000'))
     }
 
     /**
@@ -81,9 +80,9 @@ export default class {
     receiveResponse(data) {
         if (data === 0) {
             this.hideLoadingSpinner()
-            this.displayMessage(ieb_globals.contact_error, '#c90000')
+            this.displayMessage(ieb_globals.cont_err, '#c90000')
         } else {
-            this.displayMessage(ieb_globals.contact_success, '#107800')
+            this.displayMessage(ieb_globals.cont_ok, '#107800')
         }
     }
 
@@ -117,5 +116,19 @@ export default class {
     deleteOldMessage() {
         const msg = document.querySelector('.ieb-contact__form__message')
         msg ? msg.remove() : ''
+    }
+
+    /**
+     * Check user input for valid data
+     * 
+     * @return {void}
+     */
+    validateUserInput() {
+        if (this.name === '' || this.gender === '') {
+            this.displayMessage(ieb_globals.cont_err_required, '#c90000')
+        } else {
+            this.showLoadingSpinner()
+            this.makeRequest()
+        }
     }
 }
