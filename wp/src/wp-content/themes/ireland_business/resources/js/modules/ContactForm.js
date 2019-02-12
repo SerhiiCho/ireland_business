@@ -41,7 +41,7 @@ export default class {
     makeRequest() {
         axios.post(ieb_globals.ajax_url, this.createParams())
             .then(res => this.receiveResponse(res.data))
-            .catch(err => console.error(err))
+            .catch(err => this.displayMessage(ieb_globals.contact_error, '#c90000'))
     }
 
     /**
