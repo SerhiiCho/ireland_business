@@ -1,7 +1,7 @@
 <?php
 
 add_action('wp_ajax_ieb_handle_contact_form', 'ieb_handle_contact_form');
-add_action('wp_ajax_ieb_handle_contact_form', 'ieb_handle_contact_form');
+add_action('wp_ajax_nopriv_ieb_handle_contact_form', 'ieb_handle_contact_form');
 
 /**
  * @version 1.0.0
@@ -41,9 +41,6 @@ function ieb_validate_data(array $data): bool
 {
     foreach ($data as $key => $value) {
         if (!isset($value))
-            return false;
-
-        if (empty($value))
             return false;
     }
     return true;
